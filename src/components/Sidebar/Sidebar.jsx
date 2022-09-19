@@ -1,22 +1,13 @@
 import React from 'react';
-import { menuConfig } from 'constants/menu';
+import Menu from 'components/Menu/Menu';
+
 import { HiUserCircle } from 'react-icons/hi';
 
 const Sidebar = () => {
   return (
     <aside>
       <div></div>
-      <nav>
-        <ul>
-          {menuConfig &&
-            menuConfig.map(el => (
-              <li key={el.name}>
-                {el.icon}
-                {el.name}
-              </li>
-            ))}
-        </ul>
-      </nav>
+      <Menu />
       <div>
         <HiUserCircle />
         <span>User</span>
